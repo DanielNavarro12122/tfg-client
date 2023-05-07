@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div>
+    <table >
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Existencias</th>
+            <th>Precio</th>
+        </tr>
+        <tr *ngFor="let producto of aProductos">
+            <td>{{producto.id}}</td>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.existencias}}</td>
+            <td>{{producto.precio}}</td>
+        </tr>
+        
+    </table>
+</div>

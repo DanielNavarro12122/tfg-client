@@ -1,0 +1,77 @@
+
+<app-header></app-header>
+
+<div class="p-2 align-middle text-center">
+    <a href="/usuario/new" class="btn btn-success" role="button">Nuevo</a>
+
+</div>
+
+<div class="container">
+    <table class="table table-bordered table-sm text-center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descuento</th>
+                <th>Email</th>
+                <th>Tipousuario</th>
+                <th>Opciones</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr *ngFor="let usuario of aUsuarios" class="align-middle">
+                <td>{{usuario.id}}</td>
+                <td>{{usuario.nombre}}</td>
+                <td>{{usuario.descuento}}</td>
+                <td>{{usuario.email}}</td>
+                <td>{{usuario.tipousuario}}</td>
+                <td>
+                    <!--<button (click)="openDelete(usuario.id, usuario.nombre)">Borrar</button>-->
+                    <div class="btn-group col-12">
+                        <button type="button" class="btn btn-primary btn-sm">
+                            Ver
+                        </button>
+                        <button type="button" class="btn btn-warning text-white btn-sm">
+                            Editar
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm">
+                            Borrar
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal" #modal>
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">¿Estas seguro que lo quieres borrar?</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="row p-1 m-1">
+                <!-- panel-footer -->
+                <div class="col-10 text-left">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Si</button>
+                </div>
+                <div class="col-1 text-right">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+                </div>
+            </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+

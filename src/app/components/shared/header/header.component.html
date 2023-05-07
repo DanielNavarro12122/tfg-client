@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">primary</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navMenu" aria-controls="navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="navMenu" aria-labelledby="navMenu">
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#logModal" href="">Iniciar sesion</a></li>
+                    <li class="nav-item"><a href="" class="btn btn-secondary border border-info rounded-0" (click)="logIn()">Log in</a></li>
+                    <li class="nav-item"><a href="" class="btn btn-secondary border border-info rounded-0" (click)="logOut()">Log out</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/usuario/plist">Usuarios</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/productos/plist">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/tipoproducto/plist">Tipo Producto</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/carrito/plist">Carritos</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/compra/plist">Compras</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/factura/plist">Facturas</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="/file/plist">File</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="logModal" tabindex="-1" aria-labelledby="logModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="logModalLabel">Log in</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Usuario:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Contraseña:</label>
+              <input type="password" class="form-control" id="message-text">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" (click)="logIn()">Acceder</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

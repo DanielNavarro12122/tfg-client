@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<div class="p-2 align-middle text-center">
+    <a href="/usuario/new" class="btn btn-success" role="button">Nuevo</a>
+</div>
+
+<div class="container">
+    <table class="table table-bordered table-sm text-center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Existencias</th>
+                <th>Precio</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of aProductos" class="align-middle">
+                <td>{{producto.id}}</td>
+                <td>{{producto.nombre}}</td>
+                <td>{{producto.existencias}}</td>
+                <td>{{producto.precio}}</td>
+                <td>
+                    <div class="btn-group col-12">
+                        <button type="button" class="btn btn-primary btn-sm">
+                            Ver
+                        </button>
+                        <button type="button" class="btn btn-warning text-white btn-sm">
+                            Editar
+                        </button>
+                        <button type="button" class="btn btn-danger btn-sm">
+                            Borrar
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
